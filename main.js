@@ -1,33 +1,3 @@
-/**
- * Created by zukutruleSSD on 03/06/2015.
- */
-//document.write("<script type='text/javascript' src='cTransporte.js'></script>");
-//document.write("<script type='text/javascript' src='cAuto.js'></script>");
-
-
-
-
-
-/*
-var aviones = new cTransporte(3,"turbinaAAAA");
-aviones.prender();
-var falcon = new cAuto("ford", "falcon");
-falcon.prender();
-falcon.andar();
-
-console.log('avion instancia cTRansporte' + (aviones instanceof cTransporte));
-console.log('avion instancia cAuto' + (aviones instanceof cAuto));
-
-console.log('falcon instancia cTRansporte' + (falcon instanceof cTransporte));
-console.log('falcon instancia cAuto' + (falcon instanceof cAuto));
-
-
-console.log('Misma funcion: ' + (aviones.prender()===falcon.prender()));
-*/
-
-
-//var strHtml = "<!DOCTYPE html>\n" + html.createHtml()
-
 
 function respuestaCorrecta(id)
 {
@@ -53,7 +23,7 @@ function createHtmlRespuestas(respuesta, id)
         var headTitle   = new cTagTITLE("respuestas");
         var headMeta    = new cTagMETA(cTagMETA.CHARSET, cTagMETA.UTF_8);
         var body        = new cTagBODY();
-        var t3          = new cTagT(3,"La respuesta '"+respuesta+"' es correcta!")
+        var t3          = new cTagT(3,"La respuesta '"+respuesta+"' es correcta!");
         var br          = new cTagBR();
         var aHref       = new cTagA("Back","./preguntas");
         body.addChild(t3);
@@ -73,7 +43,7 @@ function createHtmlRespuestas(respuesta, id)
         var headTitle   = new cTagTITLE("respuestas");
         var headMeta    = new cTagMETA(cTagMETA.CHARSET, cTagMETA.UTF_8);
         var body        = new cTagBODY();
-        var t3          = new cTagT(3,"La respuesta correcta era = '"+respuestaCorrecta(id)+"'")
+        var t3          = new cTagT(3,"La respuesta correcta era = '"+respuestaCorrecta(id)+"'");
         var br          = new cTagBR();
         var aHref       = new cTagA("Back","./preguntas");
         body.addChild(t3);
@@ -122,12 +92,17 @@ function createHtmlPreguntas() {
     html.addChild(head);
     html.addChild(body);
 
-    var strHtml = "<!DOCTYPE html>\n" + html.createHtml()
-    //console.log(strHtml);
-    return strHtml;
+    return "<!DOCTYPE html>\n" + html.createHtml();
 }
 
-//console.log(createHtmlPreguntas());
-//console.log(createHtmlRespuestas("los vikingos", 1));
-document.write(createHtmlRespuestas("lisboa", 2));
+
+
+console.log(createHtmlPreguntas());
+console.log(createHtmlRespuestas("los vikingos", 1));
+console.log(createHtmlRespuestas("colon", 1));
+console.log(createHtmlRespuestas("lisboa", 2));
+console.log(createHtmlRespuestas("pepe", 1));
+
+//document.write(createHtmlRespuestas("lisboa", 2));
+
 

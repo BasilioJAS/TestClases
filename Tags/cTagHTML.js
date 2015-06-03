@@ -7,5 +7,5 @@
 var cTagHTML = function()
 {
     cTag.call(this,"html");
-}
+};
 cTagHTML.prototype = Object.create(cTag.prototype);
